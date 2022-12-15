@@ -27,16 +27,16 @@ public class DBConnection {
 		try {
 			Class.forName(Driver.class.getName());  //Class.forName 객체 생성
 			System.out.println("데이터베이스 드라이버 로딩 성공!");
-			url = "jdbc:mysql://localhost:3306/subquery_study";
+			url = "jdbc:mysql://localhost:3306/subquery_study";  //jdbc:mysql:을 프로토콜하고 localhost 로 서버를 설정하고 my sql 데이터베이스 불러옴
 			username = "root";
 			password = "root";
 			
 			connection = DriverManager.getConnection(url, username, password);
 			
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {     //ClassNotFoundException 경로가 없을경우 실패
 			e.printStackTrace();
 			System.out.println("드라이버 로딩 실패!");
-		} catch (SQLException e) {
+		} catch (SQLException e) {               //SQLException 연결되지 않았을 때
 			e.printStackTrace();
 			System.out.println("데이터베이스 연결 실패!");
 		}
