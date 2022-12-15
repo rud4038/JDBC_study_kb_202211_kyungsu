@@ -33,3 +33,4 @@ bin/*
 tratget/*
 .settings/*
 .metadata/*
+target/*
