@@ -32,7 +32,7 @@ public class UserDao {
 		try {
 			con = pool.getConnection();
 			sql = "insert into user_mst values(0, ?)";
-			pstmt = con.prepareStatement(sql);
+			pstmt = con.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
 			pstmt.setString(1, user.getUsername());
 			successCount = pstmt.executeUpdate();
 			

@@ -5,9 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.cj.jdbc.Driver;
-
-
 import main.java.com.study.jdbc.util.DBConnection;
 
 public class JdbcSelect1 {
@@ -21,7 +18,7 @@ public class JdbcSelect1 {
 			PreparedStatement pstmt = connection.prepareStatement(sql);   //query 입력하는 공간 쿼리를 들고있는거
 			ResultSet rs = pstmt.executeQuery();						  //연결된 데이터베이스 쿼리 실행 iterator와 동일한 형태 한번쓰면 비어있음
 			
-			System.out.println("id\t name \t\t score");
+			System.out.println("id\t \tname \t\t\t score");
 			
 			while(rs.next()) {
 				System.out.println("id: " + rs.getInt(1) //() 숫자는 컬럼번호 1번부터 시작
